@@ -1,0 +1,35 @@
+{
+  "name": "simple-shell",
+  "version": "1.0.0",
+  "description": "Simple shell backend that runs in the browser",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "npx eslint .",
+    "test": "test"
+  },
+  "author": "Lucas Pickering <lucas@lucaspickering.me>",
+  "license": "MIT",
+  "dependencies": {
+    "local-echo": "git@github.com:wavesoft/local-echo#8d0b7f55c5cf4b0b5f7c5132825dc5bd984bf017",
+    "string-argv": "^0.3.1"
+  },
+  "peerDependencies": {
+    "xterm": "^4.16.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "xterm": "^4.16.0"
+  }
+}

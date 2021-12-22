@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "curly": ["error", "all"],
+    "no-console": "warn",
+    "no-unused-vars": "off", // use the TS rule
+    "prefer-template": "error",
+    "no-plusplus": "error",
+
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": ["error", { "fixToUnknown": true }],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      { "allowExpressions": true, "allowTypedFunctionExpressions": true }
+    ],
+    "@typescript-eslint/no-inferrable-types": [
+      "error",
+      { "ignoreProperties": true, "ignoreParameters": true }
+    ],
+    "@typescript-eslint/prefer-readonly": "error",
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "parameter": true
+      }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": "error"
+  }
+}
