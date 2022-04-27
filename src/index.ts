@@ -20,7 +20,7 @@ type CommandHandler = (
 ) => Promise<void>;
 
 /** Shell abstraction for Xterm.js */
-export default class XtermJSShell {
+export class XtermShell {
   private readonly echo: LocalEchoController;
   private readonly commandHandlers: Map<string, CommandHandler> = new Map();
   private globalCommandHandler: CommandHandler | undefined = undefined;
@@ -151,9 +151,6 @@ export default class XtermJSShell {
   }
 }
 
-/**
- * TODO comment this shit
- */
 export class SubShell {
   /**
    * Flag to make sure we don't output the terminal after the command has
