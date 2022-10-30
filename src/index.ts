@@ -93,8 +93,7 @@ export class XtermShell {
    */
   public async repl(): Promise<void> {
     // Read
-    const prompt = await this.prompt;
-    const line = await this.echo.read(prompt);
+    const line = await this.echo.read(this.prompt, "  ");
 
     const argv = parseArgsStringToArgv(line);
     const command = argv.shift();
@@ -153,7 +152,7 @@ export class XtermShell {
 
 export class SubShell {
   /**
-   * Flag to make sure we don't output the terminal after the command has
+   * Flag to make sure we don't output to the terminal after the command has
    * terminated.
    */
   private destroyed: boolean = false;
